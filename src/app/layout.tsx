@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
@@ -30,6 +32,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <SpeedInsights />
+        <Analytics />
         <div className="min-h-screen bg-background text-foreground">
           <SiteHeader />
           {children}
