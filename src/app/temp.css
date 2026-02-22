@@ -43,8 +43,4 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-  cursor: default;
-}
-
 /* Add further styling for elements based on the colors */
