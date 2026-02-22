@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function HomePage() {
   return (
     <div>
-      <section className="border-b border-border bg-background">
+      <section className="border-b border-border bg-background/70 backdrop-blur">
         <div className="mx-auto grid w-full max-w-5xl gap-10 px-6 py-16 md:grid-cols-2 md:items-center">
           <div>
             <p className="text-sm font-medium text-muted-foreground">Coaching personalizzato</p>
