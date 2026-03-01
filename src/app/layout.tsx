@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Lato } from "next/font/google";
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
-import { site } from "@/config/site";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const lato = Lato({
+  variable: "--font-lato",
   subsets: ["latin"],
+  weight: ["300", "400", "700", "900"],
 });
 
 const geistMono = Geist_Mono({
@@ -18,8 +18,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: site.name,
+  title: "Chinesiologo Buscaglia",
   description: "Personal trainer: coaching online e in presenza. Allenamento personalizzato, metodologia chiara, obiettivi misurabili.",
+  icons: {
+    icon: "/logo/LOGO-COLORATO.png",
+  },
 };
 
 export default function RootLayout({
@@ -30,11 +33,11 @@ export default function RootLayout({
   return (
     <html lang="it">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${lato.variable} ${geistMono.variable} antialiased`}
       >
         <SpeedInsights />
         <Analytics />
-        <div className="min-h-screen bg-background text-foreground">
+        <div className="min-h-screen bg-transparent text-foreground">
           <SiteHeader />
           {children}
           <SiteFooter />

@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { site } from "@/config/site";
+import InstagramEmbedsCarousel from "@/components/InstagramEmbedsCarousel";
 
 export default function HomePage() {
   return (
     <div>
-      <section className="border-b border-border bg-background/70 backdrop-blur">
+      <section className="border-b border-border">
         <div className="mx-auto grid w-full max-w-5xl gap-10 px-6 py-16 md:grid-cols-2 md:items-center">
           <div>
             <p className="text-sm font-medium text-muted-foreground">Coaching personalizzato</p>
@@ -52,7 +54,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-5xl px-6 py-14">
+      <section className="relative z-10 mx-auto w-full max-w-5xl px-6 py-14">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h2 className="text-2xl font-semibold tracking-tight">Servizi</h2>
@@ -165,6 +167,20 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-5xl px-6 pb-14">
+        <InstagramEmbedsCarousel
+          profileHref={site.contacts.instagram.href}
+          permalinks={[
+            "https://www.instagram.com/p/DQ_6q10DHej/",
+            "https://www.instagram.com/p/DQmDmGuDIG9/",
+            "https://www.instagram.com/p/DCgw3ZHMUOx/",
+            "https://www.instagram.com/p/DCOvWhjs1In/",
+            "https://www.instagram.com/p/DCofVoqM6hG/",
+            "https://www.instagram.com/p/DAYL3P2Mrwf/",
+          ]}
+        />
       </section>
     </div>
   );

@@ -1,5 +1,6 @@
 export const site = {
-  name: "PT Alessandro Buscaglia",
+  name: "Alessandro Buscaglia",
+  title: "Chinesiologo & Personal Trainer",
   contacts: {
     email: {
       address: "ale.buscaglia.nonloso@gmail.com",
