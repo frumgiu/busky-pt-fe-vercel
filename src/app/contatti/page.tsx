@@ -60,8 +60,19 @@ export default function ContattiPage() {
       <section className="mt-10 rounded-2xl bg-muted p-6">
         <h2 className="text-lg font-semibold">Dove lavoro</h2>
         <p className="mt-2 text-sm leading-6 text-muted-foreground">
-          Online coaching e, se disponibile, sessioni in presenza nella tua zona. Indicami città e giorni preferiti.
+          Sono basato a <span className="font-medium text-foreground">Savona</span> e seguo clienti in presenza in città e nelle zone limitrofe. Per chi è fuori zona, lavoro online con la stessa qualità e attenzione.
         </p>
+        <div className="mt-4 overflow-hidden rounded-xl border border-border">
+          <iframe
+            src="https://maps.google.com/maps?q=Savona,+Italy&z=12&output=embed"
+            width="100%"
+            height="200"
+            style={{ border: 0 }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Savona"
+          />
+        </div>
       </section>
     </div>
   );

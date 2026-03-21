@@ -41,6 +41,9 @@ export default function SiteHeader() {
             <Link href="/metodologia" className="hover:text-primary">
               Metodologia
             </Link>
+            <Link href="/su-cosa-lavoriamo" className="hover:text-primary">
+              Cosa tratto
+            </Link>
             <Link href="/presentazione" className="hover:text-primary">
               Chi sono
             </Link>
@@ -79,6 +82,13 @@ export default function SiteHeader() {
                 onClick={() => setIsOpen(false)}
               >
                 Metodologia
+              </Link>
+              <Link
+                href="/su-cosa-lavoriamo"
+                className="block rounded-xl px-3 py-2 text-sm font-medium text-foreground hover:bg-muted"
+                onClick={() => setIsOpen(false)}
+              >
+                Cosa tratto
               </Link>
               <Link
                 href="/contatti"
